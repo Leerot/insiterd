@@ -43,6 +43,39 @@ document.addEventListener('DOMContentLoaded', () => {
   const gallery = document.querySelector('.gallery');
   if (!gallery) return;
 
+  // Pagination: 6 items per page
+  const items = Array.from(gallery.querySelectorAll('figure'));
+  const prevBtn = document.getElementById('prev-btn');
+  const nextBtn = document.getElementById('next-btn');
+  const pageIndicator = document.querySelector('.page-indicator');
+  const pageSize = 6;
+  let currentPage = 0;
+
+  function totalPages() {
+    return Math.max(1, Math.ceil(items.length / pageSize));
+  }
+
+  function renderPage() {
+    const start = currentPage * pageSize;
+    const end = start + pageSize;
+    items.forEach((el, i) => {
+      el.style.display = (i >= start && i < end) ? '' : 'none';
+    });
+    if (pageIndicator) pageIndicator.textContent = `${currentPage + 1}/${totalPages()}`;
+    if (prevBtn) prevBtn.disabled = currentPage <= 0;
+    if (nextBtn) nextBtn.disabled = currentPage >= totalPages() - 1;
+  }
+
+  function go(delta) {
+    const tp = totalPages();
+    currentPage = Math.min(tp - 1, Math.max(0, currentPage + delta));
+    renderPage();
+  }
+
+  prevBtn && prevBtn.addEventListener('click', () => go(-1));
+  nextBtn && nextBtn.addEventListener('click', () => go(1));
+  renderPage();
+
   gallery.addEventListener('click', (e) => {
     const fig = e.target.closest('figure');
     if (!fig || !gallery.contains(fig)) return;

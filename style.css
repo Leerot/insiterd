@@ -259,6 +259,33 @@ nav a {
 /* Optional: pointer cursor on tiles */
 .gallery figure{ cursor:pointer; }
 
+/* Gallery pagination */
+.gallery-nav{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin: 8px 20px 24px;
+  justify-content:center;
+}
+.gallery-nav button{
+  background:#ffffff;
+  color:#111;
+  border:none;
+  padding:8px 14px;
+  border-radius:8px;
+  font-weight:700;
+  cursor:pointer;
+}
+.gallery-nav button[disabled]{
+  opacity:0.5;
+  cursor:not-allowed;
+}
+.gallery-nav .page-indicator{
+  color:var(--text-muted);
+  min-width:64px;
+  text-align:center;
+}
+
 @keyframes twinkle {
   0% { opacity: .25; }
   100% { opacity: .45; }
