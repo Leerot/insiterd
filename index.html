@@ -52,51 +52,51 @@
 
   <!-- Galería -->
   <main class="gallery">
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2025" data-name="Fragancias" data-desc="Landing de fragancias con diseño moderno y enfoque en conversión." data-link="#">
       <img src="img/fragancia-site.webp" alt="Fragancia" loading="lazy">
     </figure>
 
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2024" data-name="Hospital" data-desc="Sitio web institucional para hospital, accesible y responsive." data-link="#">
       <img src="img/hospital-site.webp" alt="Hospital" loading="lazy">
     </figure>
 
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2024" data-name="La Locanda" data-desc="Restaurante italiano con reserva online y menú dinámico." data-link="https://lalocandarestaurante.com/">
       <a href="https://lalocandarestaurante.com/" target="_blank" rel="noopener noreferrer">
         <img src="img/LaLocanda-site.webp" alt="Restaurante" loading="lazy">
       </a>
     </figure>
 
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2025" data-name="Barilap" data-desc="Ecommerce con catálogo y carrito integrado." data-link="https://barilap.com.do/">
       <a href="https://barilap.com.do/" target="_blank" rel="noopener noreferrer">
         <img src="img/balirap-site.webp" alt="Barilap" loading="lazy">
       </a>
     </figure>
 
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2024" data-name="Steeldent" data-desc="Clínica dental con agenda de citas y blog." data-link="https://steeldent.com.do/">
       <a href="https://steeldent.com.do/">
         <img src="img/steeldent-site.webp" alt="Dentista" loading="lazy">
       </a>
     </figure>
     
-    <figure class="tile-cm">
+    <figure class="tile-cm" data-year="2025" data-name="Cooperativa El Progreso" data-desc="Landing de captación con formulario y seguimiento." data-link="https://landing.caribemedia.com.do/cooperativaelprogresoinc/">
       <a href="https://landing.caribemedia.com.do/cooperativaelprogresoinc/">
         <img src="img/coop-site.webp" alt="Orange facade" loading="lazy">
       </a>      
     </figure>
 
-    <figure class="tile">
+    <figure class="tile" data-year="2025" data-name="Nature" data-desc="Portafolio visual con fotografía y animaciones sutiles." data-link="#">
       <a href="#">
         <img src="img/nature-site.webp" alt="Nature">
       </a>      
     </figure>
 
-      <figure class="tile">
+      <figure class="tile" data-year="2025" data-name="Shopping" data-desc="Landing de retail con promociones y CTA claros." data-link="#">
       <a href="#">
         <img src="img/shoping-site.webp" alt="Shoping">
       </a>      
     </figure>
 
-      <figure class="tile">
+      <figure class="tile" data-year="2025" data-name="Viajes" data-desc="Página de reservas con integración de búsqueda y filtros." data-link="#">
       <a href="#">
         <img src="img/viajes-site.webp" alt="Viajes">
       </a>      
@@ -105,6 +105,19 @@
 
   </main>
 
-  
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-dialog" role="document">
+      <button class="modal-close" aria-label="Cerrar" data-close>×</button>
+      <div class="modal-body">
+        <h2 class="modal-title"></h2>
+        <p class="modal-meta"></p>
+        <p class="modal-desc"></p>
+        <a class="modal-link" href="#" target="_blank" rel="noopener noreferrer"></a>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>

@@ -216,6 +216,49 @@ nav a {
   color: white;
 }
 
+/* Modal */
+.modal[aria-hidden="true"]{ display:none; }
+.modal{
+  position:fixed;
+  inset:0;
+  z-index:2000;
+}
+.modal-backdrop{
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,0.6);
+  backdrop-filter: blur(2px);
+}
+.modal-dialog{
+  position:relative;
+  max-width:720px;
+  margin:6vh auto;
+  background:#121417;
+  color:#fff;
+  border-radius:12px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+  overflow:hidden;
+}
+.modal-body{ padding:24px 24px 28px; }
+.modal-title{ font-size:1.6rem; margin-bottom:8px; }
+.modal-meta{ color:#bbb; margin-bottom:12px; }
+.modal-desc{ line-height:1.6; margin-bottom:16px; }
+.modal-link{ color:#111; background:#fff; padding:10px 14px; border-radius:8px; display:inline-block; text-decoration:none; font-weight:600; }
+.modal-close{
+  position:absolute;
+  top:8px;
+  right:10px;
+  border:none;
+  background:transparent;
+  color:#fff;
+  font-size:28px;
+  line-height:1;
+  cursor:pointer;
+}
+
+/* Optional: pointer cursor on tiles */
+.gallery figure{ cursor:pointer; }
+
 @keyframes twinkle {
   0% { opacity: .25; }
   100% { opacity: .45; }
